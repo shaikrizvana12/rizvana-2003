@@ -1,0 +1,45 @@
+/* Banner styling */
+.banner img {
+    width: 100%;
+    height: 80%;
+    display: block;
+
+
+}
+
+/* Popular dishes and menu items styling */
+.popular-dishes,
+.menu-item {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.popular-dishes li,
+.menu-item {
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    width: 200px;
+}
+
+.popular-dishes li img,
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.popular-dishes li h3,
+.menu-item h2 {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #333;
+}

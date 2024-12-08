@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Our Menu</h1>
+        <p>Select your favorite dish and customize it!</p>
+    </header>
+    <main>
+        <div class="menu-item">
+            <img src="https://i.pinimg.com/474x/37/b6/60/37b660cb40988dda83c8d345f62c83da.jpg" alt="Pizza" loading="lazy">
+            <h2>Pizza</h2>
+            <p>Price: $10</p>
+            <button onclick="showOptions('Pizza')">Order Now</button>
+        </div>
+        <div class="menu-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCqVUKiNFLkMObi4Lu14GMRhReGvTJEVDWcg&s" alt="Burger" loading="lazy">
+            <h2>Burger</h2>
+            <p>Price: $8</p>
+            <button onclick="showOptions('Burger')">Order Now</button>
+        </div>
+        <div class="menu-item">
+            <img src="https://img.freepik.com/free-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19739.jpg" alt="Pasta" loading="lazy">
+            <h2>Pasta</h2>
+            <p>Price: $9</p>
+            <button onclick="showOptions('Pasta')">Order Now</button>
+        </div>
+        <div class="menu-item">
+            <img src="https://img.freepik.com/free-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19739.jpg" alt="Chocolate Brownie" loading="lazy">
+            <h2>Brownie</h2>
+            <p>Price: $6</p>
+            <button onclick="showOptions('Brownie')">Order Now</button>
+        </div>
+    </main>
+    <div id="options-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Customize Your <span id="selected-food"></span></h3>
+            <form id="food-options">
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                
+                <label for="extras">Extras:</label>
+                <input type="checkbox" id="cheese" name="extras" value="Extra Cheese"> Extra Cheese<br>
+                <input type="checkbox" id="sauce" name="extras" value="Extra Sauce"> Extra Sauce<br>
+                
+                <button type="button" onclick="submitOptions()">Add to Order</button>
+                <button type="button" onclick="closeModal()">Cancel</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/app.js" defer></script>
+</body>
+</html>
